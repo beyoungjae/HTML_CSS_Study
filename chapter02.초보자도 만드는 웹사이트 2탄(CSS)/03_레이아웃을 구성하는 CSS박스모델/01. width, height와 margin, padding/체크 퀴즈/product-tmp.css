@@ -1,0 +1,19 @@
+#container {
+   border: 1px solid black;
+   /* 가운데 정렬할때 width를 줘야한다 */
+   width: 600px;
+   margin: 0 auto;
+}
+
+table {
+   border: 1px solid rgb(172, 172, 172);
+   border-collapse: collapse;
+   width: 500px;
+}
+
+th,
+td {
+   border: 1px solid rgb(156, 156, 156);
+   border-collapse: collapse;
+   padding: 10px 20px;
+}

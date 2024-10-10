@@ -1,0 +1,336 @@
+@charset "utf-8";
+
+/* 초기화 CSS */
+
+body {
+   margin: 0;
+   padding: 0;
+   font-size: 0.9em;
+}
+
+ul {
+   list-style: none;
+   margin: 0;
+   padding: 0;
+}
+
+a {
+   color: black !important;
+   text-decoration: none !important;
+}
+
+p {
+   margin: 0;
+}
+
+/* 고정형 레이아웃 */
+
+.wrap {
+   min-width: 1200px;
+   overflow: hidden;
+}
+
+/* 헤더 */
+
+header {
+   position: relative;
+   height: 85px;
+}
+
+nav {
+   display: flex;
+   align-items: center;
+   border-bottom: 1px solid rgb(193, 193, 193);
+   background-color: white;
+   width: 100%; /* 직방은 메뉴의 width가 100% */
+}
+
+.nav__menu > li {
+   /* 하위 메뉴 만들기 위해 적용  */
+   position: relative;
+   top: 0;
+
+   /* 수평정렬 */
+   display: inline-block;
+   padding: 20px;
+}
+
+nav .login {
+   font-size: 11px;
+   background-color: rgb(232, 232, 232);
+   border: 1px solid rgb(202, 202, 202);
+   border-radius: 5px;
+   color: black;
+   width: 125px;
+   height: 30px;
+   margin-right: 20px;
+}
+
+nav .right-menu__btn {
+   width: 113px;
+}
+
+/* 본메뉴 */
+
+.w1 {
+   display: block;
+   font-size: 17px;
+   font-weight: bold;
+}
+
+.w2 {
+   display: block;
+   font-size: 13px;
+}
+
+/* 하위메뉴 */
+
+.sub-menu {
+   /* 화면에서 안보임 */
+   display: none;
+   width: 200px;
+   background-color: white;
+
+   /* 하위 메뉴 만들기 위해 absolute적용(li태그를 기준으로 위치를 잡는다) */
+   position: absolute;
+
+   /* 하위메뉴가 나타날 위치(메뉴 height와 같다) */
+   top: 85px;
+   border: 1px solid rgb(202, 202, 202);
+}
+
+.nav__menu li:hover .sub-menu {
+   display: block;
+}
+
+.sub-menu > li {
+   padding: 10px;
+}
+
+.main-page {
+   width: 100%;
+   height: 100%;
+   min-height: 550px;
+   overflow: hidden;
+}
+
+.main-page > .bg {
+   background: url(../images/bg.jpg);
+   background-repeat: no-repeat;
+   background-position: center;
+   width: 100%;
+   height: 500px;
+   background-size: 100% 120%;
+}
+
+.main-page > .bg > .how-home {
+   padding-top: 150px;
+}
+
+.how-home > h2 {
+   text-shadow: rgb(255, 255, 255) 0px 15px 40px;
+   font-size: 38px;
+   font-weight: bold;
+   text-align: center;
+   color: white;
+   margin: 0 auto;
+   cursor: default;
+   padding-bottom: 50px;
+}
+
+.tab-menu {
+   width: 574px;
+   height: 40px;
+   line-height: 40px;
+   display: flex;
+   background-color: rgba(3, 20, 45, 0.85);
+   font-weight: 900;
+   border-radius: 8px;
+   margin: 0 auto;
+}
+
+.tab-sub {
+   width: 20%;
+   text-align: center;
+   color: white;
+}
+
+.tab-sub.sub1 {
+   background-color: white;
+   width: 20%;
+   text-align: center;
+   color: black;
+   border-radius: 8px;
+}
+
+.search {
+   width: 574px;
+   padding: 20px 0;
+   margin: 0 auto;
+}
+
+.search > div {
+   width: 100%;
+   display: flex;
+   text-align: center;
+}
+
+.search > div > .iminput {
+   width: 510px;
+   height: 60px;
+   padding: 20px;
+   border: none;
+   border-radius: 8px 0 0 8px;
+}
+
+.search > div > .search-box {
+   width: 64px;
+   font-size: 25px;
+   padding-top: 10px;
+   border-radius: 0 8px 8px 0;
+   background-color: rgb(255, 104, 27);
+}
+
+.review {
+   width: 100%;
+}
+
+.review > .review_menu {
+   display: flex;
+   flex-direction: row;
+   margin: 0 auto;
+   width: 800px;
+}
+
+.review > .review_menu > .sub_review {
+   width: 400px;
+   display: block;
+   overflow: hidden;
+   white-space: nowrap;
+   text-overflow: ellipsis;
+   margin-bottom: 30px;
+}
+
+.review_menu > div .subsub {
+   font-size: 16px;
+   font-weight: bold;
+}
+
+.review_menu ul li a {
+   font-size: 12px;
+   display: block;
+   overflow: hidden;
+   white-space: nowrap;
+   text-overflow: ellipsis;
+}
+
+.rb2 > div,
+.rb3 > div {
+   display: flex;
+   justify-content: space-between;
+}
+
+.sub_review > div {
+   border-bottom: 1px solid rgba(184, 184, 184, 0.39);
+   margin-bottom: 10px;
+}
+
+.table-review:hover {
+   background-color: rgba(230, 230, 230, 0.801);
+}
+
+.sub_more {
+   display: inline-block;
+   padding: 5px 10px;
+   font-size: 12px;
+   background-color: rgba(187, 187, 187, 0.267);
+   border-radius: 8px;
+}
+
+.sub_more:hover {
+   background-color: rgba(182, 182, 182, 0.445);
+}
+
+.rb1 > div {
+   width: 100%;
+   height: 45px;
+}
+
+.sub_review {
+   margin: 0 20px;
+}
+
+.appdown {
+   background-color: rgba(243, 245, 245, 1);
+   height: 279px;
+   margin-bottom: 50px;
+}
+
+.appdown > .appimg {
+   background: url(../images/phone.png);
+   background-repeat: no-repeat;
+   background-size: 35% 100%;
+   width: 650px;
+   height: 280px;
+   padding-left: 250px;
+   margin: 0 auto;
+   box-sizing: border-box;
+}
+
+.appimg > .appimg-r {
+   font-size: 17px;
+   font-weight: bold;
+   margin-bottom: 20px;
+   padding-top: 110px;
+}
+
+.down-menu {
+   display: flex;
+   flex-direction: row;
+   width: 400px;
+   justify-content: space-between;
+}
+
+.googleplay,
+.appstore {
+   width: 190px;
+   height: 52px;
+   border-radius: 8px;
+   background-color: rgba(156, 156, 156, 0.342);
+   text-align: center;
+   padding-top: 4px;
+   font-size: 25px;
+   font-weight: bold;
+}
+
+.googleplay:hover,
+.appstore:hover {
+   background-color: rgba(121, 121, 121, 0.582);
+}
+
+footer {
+   width: 100%;
+   min-height: 298px;
+   margin: 0 auto;
+   overflow: hidden;
+   padding: 52px 0 20px;
+   position: relative;
+   text-align: center;
+}
+
+.footer_menu {
+   font-size: 12px;
+   padding-bottom: 20px;
+}
+
+.footer_menu2 {
+   font-size: 12px;
+   line-height: 1.6em;
+}
+
+.footer-last {
+   padding-top: 30px;
+   font-size: 12px;
+   text-align: center;
+   color: rgb(165, 165, 165);
+}
